@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birbal's MarkItDown 🪄</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctext x='2' y='20' font-size='20'%3E🪄%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-emoji">🪄</span>
+      <span class="brand-name">Birbal's MarkItDown</span>
+      <span class="brand-sub">→ Markdown, in a snap</span>
+    </div>
+    <div class="topbar-actions">
+      <button id="download-all-btn" class="btn btn-primary hidden" type="button">
+        ⬇️ Download all (ZIP)
+      </button>
+      <button id="clear-btn" class="btn btn-ghost hidden" type="button">
+        ✕ Clear
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="dropzone" class="dropzone" tabindex="0" aria-label="Drop files here">
+      <div class="dropzone-inner">
+        <div class="dropzone-illo">
+          <div class="floating-doc doc-1">📄</div>
+          <div class="floating-doc doc-2">📊</div>
+          <div class="floating-doc doc-3">📑</div>
+          <div class="arrow">↓</div>
+          <div class="markdown-emoji">🪄</div>
+        </div>
+        <h1 class="dropzone-title">Drop files anywhere</h1>
+        <p class="dropzone-sub">
+          PDF · DOCX · PPTX · XLSX · CSV · HTML · EPUB · JSON · XML · TXT
+        </p>
+        <p class="dropzone-or">— or —</p>
+        <label class="btn btn-primary file-pick">
+          📂 Choose files
+          <input type="file" id="file-input" multiple
+                 accept=".pdf,.docx,.pptx,.xlsx,.csv,.html,.htm,.epub,.json,.xml,.txt,.md" />
+        </label>
+        <p class="dropzone-fine">Up to 50 files · 500 MB each · runs locally</p>
+      </div>
+    </section>
+
+    <section id="filelist-section" class="filelist-section hidden">
+      <ul id="filelist" class="filelist"></ul>
+    </section>
+  </main>
+
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <footer class="footer">
+    <span>Built by <strong>Birbal Srivastava</strong> · runs entirely on your machine · powered by
+      <a href="https://github.com/microsoft/markitdown" target="_blank" rel="noopener">markitdown</a>
+    </span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
